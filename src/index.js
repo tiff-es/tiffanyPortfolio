@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {Provider, connect} from "react-redux";
-import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import createHistory from "history/createBrowserHistory";
-import configureStore from "./store";
 
-const store = configureStore()
+// import createHistory from "history/createBrowserHistory";
 
-const history = createHistory()
+
+
+// const history = createHistory()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

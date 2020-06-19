@@ -2,14 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c29042-06df-419d-b4f5-912b1c8a499f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProjectShowPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/AboutPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/ContactPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/ErrorPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/HomePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/ProjectsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/actionTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapComponent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MeetupCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Meetups.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Root.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserProfilePage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/userReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,11 +57,20 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/containers" />
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="npm start" type="js.build_tools.npm">
@@ -67,11 +107,40 @@
       <option name="presentableId" value="Default" />
       <updated>1592542455711</updated>
       <workItem from="1592542459765" duration="576000" />
-      <workItem from="1592547764833" duration="522000" />
+      <workItem from="1592547764833" duration="895000" />
+      <workItem from="1592600753424" duration="2275000" />
+      <workItem from="1592603368253" duration="542000" />
+      <workItem from="1592604015035" duration="5504000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="20" y="202" key="#ESLint" timestamp="1592601104749">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="20" y="202" key="#ESLint/0.23.1680.1027@0.23.1680.1027" timestamp="1592601104749" />
+    <state x="158" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592602218183">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="158" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1592602218183" />
+    <state width="819" height="251" key="GridCell.Tab.0.bottom" timestamp="1592603858086">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="819" height="251" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1592603858086" />
+    <state width="819" height="251" key="GridCell.Tab.0.center" timestamp="1592603858085">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="819" height="251" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1592603858085" />
+    <state width="819" height="251" key="GridCell.Tab.0.left" timestamp="1592603858085">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="819" height="251" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1592603858085" />
+    <state width="819" height="251" key="GridCell.Tab.0.right" timestamp="1592603858086">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="819" height="251" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1592603858086" />
   </component>
 </project>

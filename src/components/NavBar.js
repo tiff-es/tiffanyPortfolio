@@ -1,66 +1,28 @@
-import React, {Component} from "react";
-import {Toolbar, ButtonGroup, MenuList, GridListTileBar, CardHeader, TableHead} from "@material-ui/core";
-import {Route, NavLink, Link,Switch, BrowserRouter as Router} from "react-router-dom";
-import pride from '../assets/img/pride.jpg'
-import {Navbar} from "mdbreact";
-import {Button} from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.css';
-import '../assets/css/navbar.css'
-import {NavbarBrand, NavDropdown} from "react-bootstrap";
-import NavbarCollapse from "react-bootstrap/NavbarCollapse";
-import connect from "react-redux/lib/connect/connect";
-import {clearMessage, userLoginFetch} from "../actions/user";
-export default class NavBar extends Component {
-state = {
-    token: null
-}
-componentDidMount() {
-    this.tokenTest()
-}
-    tokenTest(){
-      const  token = localStorage.getItem('token')
-        {token ? this.setState({token: true}) :  this.setState({token: false})}
-    }
+import React from "react";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-    render(){
-        const login = () => {  return(              <NavLink to="/login"><Button id='logIn'className='btn-toolbar bg-transparent badge-pill'><div className='nav-link font-weight-bold black-text'>Login</div></Button></NavLink>
-        )}
+ const NavBar = () => (
+     <Navbar bg="light" expand="lg">
+         <Navbar.Brand href="#home">Tiffany Abraham</Navbar.Brand>
+         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+         <Navbar.Collapse id="basic-navbar-nav">
+             <Nav className="mr-auto">
+                 <Link className='nav-link'to="/">Home</Link>
+                 <Link className='nav-link'to="/about">About Me</Link>
+                 <Link className='nav-link'to="/contact">Contact Me</Link>
 
-        const logOut = () => {  return(              <a><Button onClick={localStorage.removeItem('token') && this.props.history.push('/loginrequired')} className='btn-toolbar bg-transparent badge-pill'><div className='nav-link font-weight-bold black-text'>Log Out</div></Button></a>
-        )}
+                 <NavDropdown title="Projects" id="basic-nav-dropdown">
+                     <Link className='dropdown-item'to='/project1'>Project 1</Link>
+                     <Link className='dropdown-item'to='/project2'>Project 2</Link>
+                     <Link className='dropdown-item'to='/project3'>Project 3</Link>
+                     <Link className='dropdown-item'to='/project4'>Project 4</Link>
+                     <NavDropdown.Divider />
+                     <NavDropdown.Item href="#putgithubhere">My Github</NavDropdown.Item>
+                 </NavDropdown>
+             </Nav>
+         </Navbar.Collapse>
+     </Navbar>
+)
 
-
-        return(
-            <Navbar id='navbar' className='nav-flex-icons aqua-gradient'>
-
-                    <NavbarBrand>
-                        <img src={pride} style={{width:75, marginTop: -7}} />
-                        LGBTQ+ Meetups!
-                    </NavbarBrand>
-
-                {this.loggedIn}
-                <NavLink to="/"><Button className='btn-toolbar bg-transparent badge-pill'><div className='nav-link font-weight-bold black-text'>Home</div></Button></NavLink>
-                <NavLink to="/createaccount"><Button className='btn-toolbar bg-transparent badge-pill'><div className='nav-link font-weight-bold black-text'>Create Account</div></Button></NavLink>
-                { login()  }
-                <NavLink to="/meetups"><Button className='btn-toolbar bg-transparent badge-pill'><div className='nav-link font-weight-bold black-text'>Meetups</div></Button></NavLink>
-
-                <NavLink to="/createmeetup"><Button className='btn-toolbar bg-transparent badge-pill'><div className='nav-link font-weight-bold black-text'>Create Meetup</div></Button></NavLink>
-                {/*<NavLink to='/myprofile'><Button className='btn btn-default'><div className='nav-link'>My Profile </div> </Button> </NavLink>*/}
-                {this.state.token ? logOut() : ''}
-
-            </Navbar>
-
-
-
-        )
-    }
-}
-
-const mapStateToProps = (state) => {
-    return {
-        isLoggedIn: state.users.authenticated
-    }
-}
-
-
-connect (mapStateToProps)(Navbar)
+export default NavBar
