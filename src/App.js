@@ -6,7 +6,21 @@ import AboutPage from "./containers/AboutPage";
 import ErrorPage from "./containers/ErrorPage";
 import Layout from './containers/Layout'
 import NavBar from "./components/NavBar";
+import ProjectsPage from "./containers/ProjectsPage";
 class App extends Component {
+    state = {
+        projects:{
+            title: '',
+            images: [],
+            desc: '',
+            id: null,
+            //id tbd
+            details:[],
+           githubRepoUrl: '',
+            demoVideoUrl: ''
+            //details is an array of strings, to be listed
+        }
+    }
  render(){
    return (
        <React.Fragment>
@@ -17,6 +31,7 @@ class App extends Component {
                     <Route exact path='/' component={HomePage}/>
                     <Route path='/about' component={AboutPage}/>
                     <Route path='/contact' component={ContactPage}/>
+                    <Route path='/projects' component={ProjectsPage}/>
                     <Route component={ErrorPage}/>
 
                 </Switch>

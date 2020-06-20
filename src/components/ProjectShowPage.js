@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Carousel, Container, Image } from "react-bootstrap";
-const ProjectShowPage = ({id, title, images, desc, details })=>  {
+const ProjectShowPage = ({id, title, images, desc, details, githubRepoUrl, demoVideoUrl})=>  {
 //    The parent of this
 //    This will be the project show page consisting of detailed breakdown of my projects, bullet points similar to
 //    resume, images, and demos

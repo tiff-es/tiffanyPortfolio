@@ -2,17 +2,7 @@ import React from "react";
 import { Card, Carousel, Container, Jumbotron } from "react-bootstrap";
 
 export default class ProjectsPage extends React.Component{
-    state = {
-        projects:{
-            title: '',
-            images: [],
-            desc: '',
-            id: null,
-            //id tbd
-            details:[]
-            //details is an array of strings, to be listed
-        }
-    }
+
 
     render() {
         return(
