@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import { Alert, Button, Carousel, Jumbotron } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+import {connect} from "react-redux";
+import {axiosGetProjects, getProjects} from "../actions/project";
 
 export default class HomePage extends React.Component{
 
@@ -65,7 +67,23 @@ export default class HomePage extends React.Component{
     )}
 }
 //
+const mapStateToProps = (state) => {
+    return {
+        projects: state.projects
+    }
+}
 
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+        axiosGetProjects: (projects) => {
+            dispatch(axiosGetProjects(projects))
+        }
+    }
+}
+
+
+connect(mapDispatchToProps, mapStateToProps)(HomePage)
 
 
 

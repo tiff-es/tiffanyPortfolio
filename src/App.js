@@ -7,7 +7,19 @@ import ErrorPage from "./containers/ErrorPage";
 import Layout from './containers/Layout'
 import NavBar from "./components/NavBar";
 import ProjectsPage from "./containers/ProjectsPage";
-class App extends Component {
+import {connect, Provider} from "react-redux";
+import {axiosGetProjects} from "./actions/project";
+// import configureStore from "./configureStore";
+// const { store } = configureStore()
+// console.log(store.getState())
+
+ class App extends Component {
+
+UNSAFE_componentWillMount() {
+    // Get fetch call to localhost:3000/projects, adds to state
+    this.props.axiosGetProjects()
+}
+
     state = {
         projects:{
             title: '',
@@ -21,9 +33,12 @@ class App extends Component {
             //details is an array of strings, to be listed
         }
     }
- render(){
+
+
+    render(){
+
    return (
-       <React.Fragment>
+
            <Router>
            <NavBar/>
            <Layout>
@@ -38,9 +53,23 @@ class App extends Component {
            </Layout>
 
            </Router>
-       </React.Fragment>
-   )
+ )
  }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        projects: state.projects.projects
+    }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        axiosGetProjects: (projects) => {
+            dispatch(axiosGetProjects(projects))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
