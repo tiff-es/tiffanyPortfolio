@@ -14,7 +14,9 @@ import axios from "axios";
      return { type: GET_PROJECTS, projects: projects }
  }
 
-
+// export function confirmPropsPopulated ( ) {
+//     return { type: PROPS_POPULATED, populated: true}
+// }
 export const axiosGetProjects = (projects) => {
     return dispatch => {
         axios.get(`${API_URL}projects`)

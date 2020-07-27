@@ -9,38 +9,28 @@ import NavBar from "./components/NavBar";
 import ProjectsPage from "./containers/ProjectsPage";
 import {connect, Provider} from "react-redux";
 import {axiosGetProjects} from "./actions/project";
-// import configureStore from "./configureStore";
-// const { store } = configureStore()
-// console.log(store.getState())
 
  class App extends Component {
 
 UNSAFE_componentWillMount() {
-    // Get fetch call to localhost:3000/projects, adds to state
+    // 1.) Get fetch call to localhost:3000/projects, adds to state
     this.props.axiosGetProjects()
+
+    // telling conditional rendering props have been populated
+    this.setState({propsPopulated: true})
 }
-
     state = {
-        projects:{
-            title: '',
-            images: [],
-            desc: '',
-            id: null,
-            //id tbd
-            details:[],
-           githubRepoUrl: '',
-            demoVideoUrl: ''
-            //details is an array of strings, to be listed
-        }
+        propsPopulated: false
+        // for conditional rendering of props upon population
     }
-
 
     render(){
 
    return (
 
            <Router>
-           <NavBar/>
+           {/*  2.)  Pass projects down to NavBar via props */}
+           <NavBar projects={this.props.projects} populated={this.state.propsPopulated}/>
            <Layout>
                 <Switch>
                     <Route exact path='/' component={HomePage}/>

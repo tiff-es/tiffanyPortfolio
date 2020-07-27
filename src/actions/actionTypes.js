@@ -21,6 +21,6 @@
 // export const CLEAR_MESSAGE = 'CLEAR_MESSAGE'
 //
 // export const API_URL =' https://lgbtq-meetup-api.herokuapp.com/api/'
-
+// export const PROPS_POPULATED = 'PROPS_POPULATED'
 export const GET_PROJECTS = 'GET_PROJECTS'
 export const API_URL =' http://localhost:3000/'
