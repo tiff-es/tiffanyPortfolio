@@ -6,10 +6,20 @@ import { Link } from "react-router-dom";
 
      console.log('projects:', projects)
 
+
+
      const mapProjects = (projects) => {
          console.log('mapProjects:', projects)
+
          //map thru projects to return Link for each
-]     }
+
+
+         return <Link className='dropdown-item' to={`/project_${projects[0].id}`}> {projects[0].title}</Link>
+         //  after mapping:       ^ ^ ^     rendering Link to project page
+     }
+
+
+
      return(
      <Navbar bg="light" expand="lg">
          <Navbar.Brand href="#home">Tiffany Abraham</Navbar.Brand>
@@ -22,7 +32,7 @@ import { Link } from "react-router-dom";
 
                  <NavDropdown title="Projects" id="basic-nav-dropdown">
 
-                     { populated === true ?    mapProjects(projects) : null}
+                     { populated === true && projects.length > 0 ?    mapProjects(projects) : null}
                      {/* checks if projects prop is populated and available to avoid undefined*/}
 
                      <Link className='dropdown-item' to='/lgbtqmeet'>LGBTQ+ Meet</Link>
