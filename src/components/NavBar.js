@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 
          //map thru projects to return Link for each
 
-
          return <Link className='dropdown-item' to={`/project_${projects[0].id}`}> {projects[0].title}</Link>
          //  after mapping:       ^ ^ ^     rendering Link to project page
      }
